@@ -1,0 +1,203 @@
+//Day 3 - Assignment
+class Student
+        { 
+         String name = "John";
+    	 int rollno = 2;
+      
+    public static void main(String[] args)
+        {
+         Student obj = new Student();
+   	 System.out.println("Name :" +obj. name );
+   	 System.out.println("RollNo : " +obj. rollno );
+	 }
+     }  
+
+//--------------------------------------------------------------------------------------
+class Studentss{
+         String name;
+         int rollno;
+         String phone ;
+         String address;
+    Studentss(String name,int rollno , String phone,String address)
+       {
+        this.name=name;
+        this.rollno=rollno;
+        this.phone=phone;
+        this.address=address;
+       }
+  void display()
+      {
+   System.out.println("Name : " + name);
+   System.out.println("RollNo : " + rollno);
+   System.out.println("Phone : " + phone);
+   System.out.println("Address : " + address);
+      }
+      public static void main(String[] args)
+      {
+         Studentss obj = new Studentss("Devi",1,"98645421","Nellai");
+         obj.display();
+        Studentss obj2 = new Studentss("Thangam",2,"98145421","Pirancheri");
+        obj2.display();
+}
+      
+}
+//----------------------------------------------------------------------------------------
+class Emp
+   {
+    String name;
+    int id;
+    String destination;
+    double salary;
+  Emp()
+     {
+    this.name=null;
+    this.id=0;
+    this.destination=null;
+    this.salary=0;
+    }
+ Emp(String name,int id,String destination,double salary)
+    {
+     this.name = name;
+     this.id=id;
+     this.destination=destination;
+     this.salary=salary;
+     } 
+  Emp(Emp e1)
+    {
+     this.name=e1.name;
+     this.id=e1.id;
+     this.destination=e1.destination;
+     this.salary=e1.salary;
+    }
+  void display()
+      {
+   System.out.println("Name : " + name );
+   System.out.println("id : "+ id );
+   System.out.println("Destination : " + destination);
+   System.out.println("Salary : "+ salary ); 
+  }
+public static void main(String[] args)
+    {
+      Emp e = new Emp();
+      e.display();
+      Emp e1 = new Emp("Devi",01,"Tester",40000);
+      e1.display();
+      Emp e2 = new Emp(e1);
+        e2.name = "Thangam ";
+        e2.id= 02;
+        e2.destination="Devolper";
+      e2.display();
+    }
+ }
+
+//---------------------------------------------------------------------------------------
+class Vehicle 
+	{ 
+     int id ;
+     String  brandname;
+     double price;
+     static int count=0;
+  Vehicle(int id,String brandname , double price)
+	{
+         this.id=id;
+	 this.brandname=brandname;
+	 this.price=price;
+  count++;
+	}
+  void show()
+      {
+    
+     System.out.println(" Vehicle id : " + id );
+     System.out.println(" Vehicle BrandName : " + brandname );
+     System.out.println(" Vehicle price : " + price); 
+     }
+  static void count()
+      {
+     System.out.println(" Vehicle Count : " + count);
+    }   
+       public static void main(String[] args)
+   	   {
+              Vehicle obj = new Vehicle(01 , "TVS", 71000);
+              obj.show();
+              Vehicle obj1 = new Vehicle(02,"Hero",80000);
+            	 obj1.show();
+             	 obj1.count();
+           }
+    }
+ //--------------------------------------------------------------------------------- 
+class Emps
+       {
+       String name;
+       int joining;
+       double salary;
+       String address;	
+ Emps(String name , int joining , double salary , String address)
+       {
+       this.name=name;
+       this.joining=joining;
+       this.salary=salary;
+       this.address=address;
+       }
+void show()
+      {
+     System.out.println("Emp Name : " + name );
+     System.out.println("Emp year of joining : " + joining );
+     System.out.println("Emp salary : " + salary );
+     System.out.println("Emp Address: " + address );
+     System.out.println("------------------------------");
+    }
+
+         public static void main(String[] args)
+   {
+    Emps obj = new Emps("Robert",1994 ,45000, "64C- WallsStreat");
+      obj.show();
+    Emps obj1 = new Emps("Sam", 2000,50000, "68D- WallsStreat");
+      obj1.show();
+    Emps obj2 = new Emps("John", 1999,60000, "26B- WallsStreat");
+      obj2.show();
+     }
+}
+//----------------------------------------------------------------------------- 
+class Store 
+   {
+
+     static  String name;
+     static  String location;
+     void  setStoreDetails(String name, String location)
+         {
+          this.name=name;
+          this.location=location;  	
+        }
+     void  displayStoreDetails()
+    		 {  sss
+     System.out.println("Store Name :" + name);
+     System.out.println("Store Location : " + location);
+
+
+     }
+class Product{
+
+
+
+
+
+
+}
+  
+    
+           
+           
+     
+
+
+
+
+
+
+
+
+
+
+
+
+

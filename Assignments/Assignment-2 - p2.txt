@@ -1,0 +1,260 @@
+// Day 2 -Assignment --> Part - 2 
+class Oddsum {
+   public static void main(String[] args) 
+  {
+   int[] arr = new int[10];
+   int sum=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter integers:");
+     for (int i=0;i<10;i++)
+            {
+             arr[i]=sc.nextInt();
+             if (arr[i]%2 != 0)
+                sum +=arr[i];
+      }
+  System.out.println("Sum of odd numbers: " +sum);
+     }
+} 
+//------------------------------------------------------------------------------------     
+class Primenumbers
+{
+ public static void main(String[] args)
+   {
+     int[] arr = new int[10];
+   Scanner sc=new Scanner(System.in);
+    System.out.println("Enter 10 integers:");
+      for (int i=0;i<10;i++)
+         arr[i]=sc.nextInt();
+        System.out.println("Prime numbers:");
+        for (int n : arr)
+            {
+            if (isPrime(n)) 
+                {
+                 System.out.print(n + " ");
+                }  
+       }
+   }
+    public static boolean isPrime(int n) 
+          {
+        if (n <= 1) return false;
+        for (int i=2;i*i<=n;i++)
+         if (n%i == 0) return false;
+        return true;
+        }
+}
+//------------------------------------------------------------------------------------
+class Fibonacci
+{
+   public static void main(String[] args)
+   { 
+      int fib1=0;
+      int fib2=1;
+for(int i = 0 ; i < 30 ; i++)
+    {
+  System.out.print(fib1+" " );
+   int next = fib1+fib2;
+   fib1=fib2;
+   fib2=next;
+   }
+  }   
+}
+//-----------------------------------------------------------------------------------
+class DigitSum
+{
+  public static void main(String[] args)
+   {
+     int[] arr={12,6,45,13};
+     print(arr);
+    }
+       
+   public static void print(int[] arr)
+       {
+        int sum = 0;
+	for(int i = 0 ; i < arr.length;i++)
+	{
+   		if(arr[i] >= 10 )
+  		{
+			while(arr[i]>0)  
+      			{
+     			int digit = arr[i] % 10;
+    			sum+=digit;
+  			arr[i]=arr[i]/10;
+         		}
+     
+     		 }
+	}
+    	System.out.println("Sum of the Digits :" +sum);
+  	}
+ }    
+//----------------------------------------------------------------------------------   
+class IdenticalorNot
+   {
+      public static void main(String[] args)
+        {  
+            char[] x={'m','n','o','p'};
+            char[] y={'m','n','o'};
+            if(x.length != y.length)
+               {
+                System.out.println("False");
+                return;
+                } 
+        for(int i = 0 ; i < x.length ; i++)
+              {
+                if(x[i]==y[i])
+                  { 
+                    continue;
+                   }else 
+                       {
+                         System.out.println("False");
+                         break;
+                         }
+                      }
+         System.out.println("True");
+        }
+     }
+//--------------------------------------------------------------------------------------------                   
+class Records
+       {
+          public static void main(String[] args)
+            {
+           int[] arr = {1982, 1987, 1993, 1996, 1999, 2003, 2006, 2007, 2009, 2010, 2016, 2002};
+           Scanner sc=new Scanner(System.in);
+           System.out.println("Enter the Year :" );
+           int input =sc.nextInt();
+           for(int i = 0 ; i < arr.length ; i++)
+               {
+                  if(arr[i]==input)
+                      {
+                 System.out.println("Records Exist..");
+                 return ;
+                 }
+             }
+              System.out.println(" Record does not Exist ");     
+           }
+    }
+//-------------------------------------------------------------------------------------
+class Weightofpeople
+      {
+         public static void main(String[] args)
+           {     
+             int[] age = {30, 50 ,61 , 45, 80 , 33 , 53 , 56 , 78 , 34 };
+             for(int i = 0 ; i < age.length ;i++)
+                {
+              for(int j = i + 1; j < age.length ;j++)
+                     {  
+              if(age[i]<age[j])
+                        {
+                       int temp = age[i];
+                       age[i]=age[j];
+                        age[j]=temp;
+                     }
+                   }
+                }
+               for(int i = 0 ; i < age.length ;i++)
+               {
+              System.out.print(age[i]+"  ");
+          }
+     }
+  }
+//--------------------------------------------------------------------------------------- 
+class Ageofpeople
+  {
+    public static void main(String[] args)
+       {
+     int[] age={12,34,56,22,31,45,21,44,51,60};
+     int C1=0;
+     int C2=0;
+     int C3=0;
+    for(int i = 0 ; i < age.length ; i++)
+         {
+            if(age[i] < 18)
+               {
+                C1++;
+               }
+         if(age[i]>=18 && 60>=age[i])
+               {
+               C2++;
+                }
+        if(age[i]>60)
+         { 
+            C3++;
+         }
+      }
+       System.out.println("Number of age below 18:" + C1);
+       System.out.println("Number of age 18 to 60 : " +C2);
+      System.out.println("Number of age  above 60 : " +C3);
+ 
+  }
+}
+//----------------------------------------------------------------------------------------
+class Students
+    {
+       public static void main(String[] args)
+          {  
+      int[] rollno = {1,2,3,4,5,6,7,8,9,10};
+      int[] mark1 = {66,74,34,56,78,45,36,69,45,99};
+      int[] mark2 = {75,83,56,73,66,83,72,55,67,90};
+      int[] mark3 = {78,45,89,35,89,56,90,45,67,55};
+   
+ System.out.println("Roll No  Total  Avg");
+ System.out.println("-------  -----  ----");
+
+    for(int i = 0 ; i < rollno.length ;i++)
+         {
+            int total = mark1[i]+ mark2[i]+ mark3[i];
+            int avg = total / 3 ;
+	    System.out.println("  "+rollno[i]+"      "+total+"      "+avg+"  ");
+         }
+     }
+}
+//------------------------------------------------------------------------------------------
+class Dimensional 
+    {
+    public static void main(String[] args)
+   {
+       int mat[][] = {{1,2,3},{4,5,6},{7,8,9}};
+       int sum = 0;
+    for(int i = 0 ; i < mat.length ; i++)
+         {
+    for(int j = 0 ; j <mat[0].length;j++)
+       {
+     System.out.print(mat[i][j]);
+     sum+=mat[i][j];
+       }
+System.out.println();
+     } 
+System.out.println("\n\n Sum = " + sum+"\n\nRow-wise Sum\n\n");
+ for(int i = 0 ; i < mat.length ; i++)
+         {
+       int Rowsum = 0 ;
+    for(int j = 0 ; j <mat[0].length;j++)
+       {
+       Rowsum+=mat[i][j];
+    
+     }
+  System.out.println("Row " + (i + 1)+ ":"+Rowsum);
+   }
+
+System.out.print("\nCol-wise Sum\n");
+ for(int i = 0 ; i < mat.length ; i++)
+         {
+       int Colsum = 0 ;
+    for(int j = 0 ; j <mat[0].length;j++)
+       {
+       Colsum+=mat[j][i];
+     }
+System.out.println("Col " + (i + 1)+ ":"+Colsum);
+   }
+
+System.out.print("\nTranspose\n");
+ for(int i = 0 ; i < mat.length ; i++)
+         {
+    for(int j = 0 ; j <mat[0].length;j++)
+       {
+     System.out.print(mat[j][i]);
+       }
+System.out.println();
+     } 
+   }
+}
+//-----------------------------------------------------------------------------------

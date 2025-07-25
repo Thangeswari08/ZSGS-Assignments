@@ -1,0 +1,165 @@
+//Day 2 - Part 1- Assignment 
+class min
+   { 
+     public static void main(String[] args)
+       {
+          int x = 6 ;
+          int y = 8 ;
+          int z = 10 ;
+         int min = x ;
+ if(x>y)
+   {
+      min = y;
+    }
+      if(y>z)
+        {
+           min = z;
+        }
+     System.out.println(" Minimum number is " + min );   
+    }
+ } 
+//---------------------------------------------------------------------------------
+class PatternPrinter
+	{
+        public static void main(String[] args) {
+                 for(int i = 0 ; i < size ;i++)
+                         {
+                 for(int j = 0 ; j < size ;j++)
+                   {
+           if( i==j || i+j==size-1)
+               {
+         System.out.println("1");
+              }else {
+          System.out.println("");
+          }
+     }
+     System.out.println();
+   }
+}
+
+          
+
+      
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------------
+class zohocorp
+  {
+      public static void main(String[] args)
+    {
+      String[] str = {"ZOHO","CORP","ORAT","IONS"};
+      int i = 0;
+      do{
+         System.out.println(str[i]);
+         i++;
+     }while(i<str.length);
+    }
+}
+//--------------------------------------------------------------------------------
+class sumEven
+{
+  public static int sumEven(int n )
+   {
+       int sum = 0;
+   for(int i =1;i <=n;i++)
+       {
+          if(i % 2 != 0)
+       {
+        continue;
+        }
+         sum+=i;
+      }
+          return sum;
+      }
+         public static void main(String[] args)
+      {
+          int n = 10 ;
+          System.out.println("Sum of even numbers from 1 to " + n + "is" + sumEven(n));
+       }
+    }
+//-----------------------------------------------------------------------------------
+class DecimaltoBinary
+{
+   public static String DecimaltoBinary(int decimal)
+   {  
+   String binary="";
+  int num = decimal;
+     do {
+          int rem =num%2;
+          binary = rem+binary;
+          num /= 2;
+        } while (num>0);
+        return binary;
+    }
+       public static void main(String[] args)
+          {
+          int decimal = 25;
+       String binary = DecimaltoBinary(decimal);
+      System.out.println("Binary number is " + binary );
+       }
+    }
+//-------------------------------------------------------------------------------------
+class Grade 
+{ 
+public static void gradeIf(int percent)
+    {
+        System.out.println("using if-Case");
+        if (percent >= 85 && percent <= 100) 
+              {
+            System.out.println("Grade: A");
+              } 
+          else if (percent >= 70) 
+          {
+            System.out.println("Grade: B");
+         } 
+           else if (percent >= 50) 
+             {
+            System.out.println("Grade: C");
+          }  
+          else 
+              {
+            System.out.println("Fail");
+        }
+    }
+    public static void gradeSwitch(int percent) {
+      System.out.println("using switch-case");
+      int grade = percent / 10; 
+        switch (grade) {
+             case 10:
+              case 9:
+              case 8:
+                if(percent >= 85)
+                    {
+                    System.out.println("Grade: A");
+                }
+                  else {
+                    System.out.println("Grade: B"); 
+                      }
+                    break;
+              case 7:
+                   System.out.println("Grade: B");
+                break;
+                case 6:
+                 case 5:
+                System.out.println("Grade: C");
+                 break;
+              default:
+                System.out.println("Fail");
+              }
+  }
+    public static void main(String[] args) {
+          Scanner sc = new Scanner(System.in);
+          System.out.print("Enter percentage: ");
+        int percent = sc.nextInt(); 
+         gradeIf(percent);
+         gradeSwitch(percent);
+        }
+  }
+  
+//-----------------------------------------------------------------------------------

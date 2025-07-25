@@ -1,0 +1,215 @@
+//Day 2 - Part 3 
+class binarysum
+  {
+   public static void main(String[] args)
+      {
+  String s1="11";
+  String s2="1";
+  String str = "";
+  int i =s1.length()-1;
+  int j =s2.length()-1;
+int sum = 0 ; int carry = 0 ;
+while(i>=0 || j>=0 ||carry == 1)
+   {
+     sum=carry;
+     if(i>=0)
+        {
+         sum+=s1.charAt(i)-'0';
+         i--;
+      }
+    if(j>=0)
+       { 
+      sum+=s2.charAt(i)-'0';
+      j--;
+    }
+   str=String.valueOf(sum%2) + str;
+   carry=sum/2;
+   }
+       System.out.println(str);
+     }
+ }
+//----------------------------------------------------------------------------------
+class ReverseVowels
+  {
+    public static void main(String[] args)
+       {
+         String str = "Hello";
+         char[] ch = str.toCharArray();
+         int l = 0 ; 
+         int r = str.length()-1;
+         while(l<r) 
+     {
+    if(ch[l] == 'a'|| ch[l] == 'e' || ch[l] == 'i'|| ch[l] =='o' || ch[l] == 'u' || ch[l] == 'A' ||
+         ch[l] == 'E' || ch[l]== 'I' || ch[l] == 'O' || ch[l] == 'U' )
+        {
+           if(ch[r] == 'a' || ch[r] == 'e' || ch[r] == 'i' || ch[r] == 'o' || ch[r] == 'u' ||
+          ch[r] == 'A' || ch[r] == 'E' || ch[r] == 'I' || ch[r] == 'O' || ch[r] == 'U')  
+                   {
+                    char temp = ch[l];
+                    ch[l]=ch[r];
+                    ch[r]=temp;
+                    l++;
+                    r--;
+                    } 
+                 r--;
+               }
+            l++;
+           }
+       String result = " ";
+       for(char c : ch  )
+            {
+         result+=c;
+           }
+         System.out.print("Revere the Vowel : " +result);
+          
+        }
+    }            
+//-------------------------------------------------------------------------------------------
+ class Alphabet
+    {  
+    public static void main(String[] args)
+       {  
+       int n = 29;
+       String str = alpha(n);
+       System.out.println(str);
+  }
+public static String alpha(int n)
+     {
+      String result="";
+     if(n<=26)
+       {
+         int x = 65+n-1;
+         result+=(char)x+result;
+         }else 
+           { 
+        return alpha(n/26)+alpha(n%26);
+         }
+        return result;
+     }
+  }  
+
+//---------------------------------------------------------------------------------------
+class Twostrings
+    {
+     public static void main(String[] args)
+         {
+          int[] fre = new int[26];
+          String s = "abcd";
+          String t = "abcde";
+          char letter ='a';
+     for(char c : s.toCharArray())
+        {
+          fre[c-'a']++; 
+          }
+   for(char c : t.toCharArray())
+        {
+        fre[c-'a']++;
+         
+      if(fre[c-'a']>0)
+       {
+         letter=c;
+        }
+     } 
+     System.out.println( "Extra Letter : " + letter);
+        }
+    }  
+//----------------------------------------------------------------------------------------
+
+class IsSubsequence
+      {
+        public static void main(String[] args)
+           {
+         String  s = "abc";
+         String  t = "ahbgdc";
+         int l = 0 ;int r = 0 ;
+   while(r<t.length())
+        {
+     if(s.charAt(l) == t.charAt(r))
+           {
+          l++;
+        }
+      r++;
+   }
+   System.out.println("Is Subsequence : " +( l == s.length()));
+    }	
+}
+//-------------------------------------------------------------------------------------
+class Addstring
+     {
+    public static void main(String[] args)
+   	{
+   String num1 = "11";
+   String num2 = "123";
+   String str ="";
+  int i =num1.length()-1;
+  int j = num2.length()-1;
+ int sum = 0 ; int carry = 0 ;
+while(i>=0 || j>=0 ||carry > 0)
+   {
+     sum=carry;
+     if(i>=0)
+        {
+         sum+=num1.charAt(i)-'0';
+         i--;
+        }
+    if(j>=0)
+       { 
+      sum+=num2.charAt(j)-'0';
+      j--;
+    }
+   str=String.valueOf(sum%10) + str;
+   carry=sum/10;
+   
+   }
+       System.out.println(str);
+     }
+ }
+//---------------------------------------------------------------------------------------
+class Segments
+   {
+    public static void main(String[] args)
+         {
+       String  s = "Hello, my name is John";
+       int segments = 0 ;
+       for(int i = 0 ; i < s.length();i++)
+             {
+         if (( i == 0 || s.charAt(i-1)==' ') && s.charAt(i) != ' ')
+              {
+              segments++;
+		}
+	    }
+	  System.out.println("Segments of the String is : " + segments);
+   }
+}
+//---------------------------------------------------------------------------------------
+class DetectCapital 
+   {
+    public static void main(String[] args)
+       {  
+       String word ="Google"; 
+        int capitalcount = 0;
+        int n = word.length();
+        for(int i = 0 ; i < word.length() ;i++)
+             {
+  	 if(Character.isUpperCase(word.charAt(i)))
+           	{
+           	 capitalcount++;
+           	} 
+      	 }
+    		if(capitalcount == n)
+      		  {
+         	 System.out.println("True");
+     		  }
+    		 if(capitalcount == 0)
+         	{
+           	 System.out.println("True");
+        	 }
+    if(capitalcount == 1 && Character.isUpperCase(word.charAt(0)))
+       	 {
+         System.out.println("True");
+         }else{
+    	System.out.println("False");
+        }
+     }
+  }
+//---------------------------------------------------------------------------------------
