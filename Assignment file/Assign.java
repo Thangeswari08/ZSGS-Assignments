@@ -292,7 +292,7 @@ public static void gradeIf(int percent)
                     System.out.println("Grade: A");
                 }
                   else {
-                    System.out.println("Grade: B"); // 80-84
+                    System.out.println("Grade: B");
                       }
                     break;
               case 7:
